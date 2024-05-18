@@ -1,0 +1,56 @@
+{
+    "name": "bramato/filament-stripe-manager",
+    "type": "library",
+    "description": "Manage Submission and billing with Stripe in Filament",
+    "keywords": [
+        "filament",
+        "laravel",
+        "stripe",
+        "submission"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Bramato",
+            "email": "marco@bramato.com",
+            "homepage": "https://github.com/bramato",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "filament/support": "^3.2",
+        "laravel/cashier": "^15.3",
+        "calebporzio/sushi": "^2.5",
+        "blade-ui-kit/blade-heroicons": "^2.3.0",
+        "codeat3/blade-eos-icons": "^1.14.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bramato\\FilamentStripeManager\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bramato\\FilamentStripeManager\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bramato\\FilamentStripeManager\\FilamentStripeManagerServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "2.34.5",
+        "pestphp/pest-plugin-laravel": "^2.3"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
