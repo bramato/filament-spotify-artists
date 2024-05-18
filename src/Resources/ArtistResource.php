@@ -18,9 +18,9 @@ class ArtistResource extends Resource
 {
     protected static ?string $model = Artist::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'zondicon-artist';
 
-    protected static ?string $navigationGroup = 'Stripe Manager';
+    protected static ?string $navigationGroup = 'Spotify Manager';
 
     public static function form(Form $form): Form
     {
@@ -33,7 +33,7 @@ class ArtistResource extends Resource
                 ])->live(),
                 TextInput::make('monthly_quota')
                 ->disabled(fn (Get $get): bool => ($get('monthly_quota_status') == 0)),
-                
+
                 Select::make('annual_quota_status')->options([
                     false => 'No',
                     true => 'Yes'

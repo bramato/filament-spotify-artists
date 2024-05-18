@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Bramato\FilamentSpotifyManager;
 
+use Bramato\FilamentSpotifyManager\Resources\ArtistResource;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
@@ -17,14 +18,14 @@ class FilamentSpotifyManagerPlugin implements Plugin
 
     public function getId(): string
     {
-        return 'filament-stripe-manager';
+        return 'filament-spotify-manager';
     }
 
     public function register(Panel $panel): void
     {
 
             $panel->resources([
-
+                ArtistResource::class
             ])
             ;
 

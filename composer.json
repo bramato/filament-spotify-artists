@@ -27,7 +27,8 @@
         "jwilsson/spotify-web-api-php": "^6.0",
         "filament/forms": "^3.2",
         "filament/tables": "^3.2",
-        "filament/filament": "^3.2"
+        "filament/filament": "^3.2",
+        "blade-ui-kit/blade-zondicons": "^1.5"
     },
     "autoload": {
         "psr-4": {
