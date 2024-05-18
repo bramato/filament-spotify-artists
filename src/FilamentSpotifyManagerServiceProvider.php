@@ -11,10 +11,10 @@ class FilamentSpotifyManagerServiceProvider extends PackageServiceProvider
     {
         $package->name('filament-stripe-manager')
             ->hasMigrations([
-                'create_stripe_product_table',
-                'create_stripe_plan_table',
-                'create_stripe_metadatamorph_table',
-                'create_stripe_product_table_add_plan_id'
+                'create_spotify_artist_table',
+                'create_spotify_albums_table',
+                'create_spotify_songs_table',
+                'create_spotify_users_artists_table',
             ])
             ->hasTranslations()
         ->hasViews()
