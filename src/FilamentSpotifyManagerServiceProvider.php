@@ -9,7 +9,7 @@ class FilamentSpotifyManagerServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
-        $package->name('filament-stripe-manager')
+        $package->name('filament-spotify-manager')
             ->hasMigrations([
                 'create_spotify_artist_table',
                 'create_spotify_albums_table',
