@@ -1,17 +1,11 @@
 <?php
 
-namespace Bramato\FilamentStripeManager;
+namespace Bramato\FilamentSpotifyManager;
 
-use Bramato\FilamentStripeManager\Http\Livewire\CreditCardPayment;
-use Bramato\FilamentStripeManager\Http\Livewire\FilamentStripeManagerPlans;
-use Bramato\FilamentStripeManager\Http\Livewire\ListUserCards;
-use Bramato\FilamentStripeManager\Http\Livewire\PaymentHistory;
-use Livewire\Livewire;
-use Illuminate\Support\Facades\Route;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FilamentStripeManagerServiceProvider extends PackageServiceProvider
+class FilamentSpotifyManagerServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -49,10 +43,7 @@ class FilamentStripeManagerServiceProvider extends PackageServiceProvider
     protected function registerLivewireComponents()
     {
         // Replace 'ComponentClass' with the actual full class name of your Livewire component
-        Livewire::component('credit-card-payment', CreditCardPayment::class);
-        Livewire::component('list-user-cards', ListUserCards::class);
-        Livewire::component('payment-history', PaymentHistory::class);
-        Livewire::component('filament-stripe-manager-plans', FilamentStripeManagerPlans::class);
+        //Livewire::component('credit-card-payment', CreditCardPayment::class);
         // Register other components similarly
     }
 
@@ -65,9 +56,9 @@ class FilamentStripeManagerServiceProvider extends PackageServiceProvider
 
     protected function loadTranslations(): void
     {
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'filament-stripe-manager');
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'filament-spotify-manager');
         $this->publishes([
-            __DIR__.'/../resources/lang' => resource_path('lang/vendor/filament-stripe-manager'),
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/filament-spotify-manager'),
         ], 'lang');
     }
 }

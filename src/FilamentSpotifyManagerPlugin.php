@@ -2,15 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Bramato\FilamentStripeManager;
+namespace Bramato\FilamentSpotifyManager;
 
-use BezhanSalleh\FilamentShield\Support\Utils;
-use Bramato\FilamentStripeManager\Resources\StripePlanResource;
-use Bramato\FilamentStripeManager\Resources\StripeProductResource;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
-class FilamentStripeManagerPlugin implements Plugin
+class FilamentSpotifyManagerPlugin implements Plugin
 {
 
     public static function make(): static
@@ -27,8 +24,7 @@ class FilamentStripeManagerPlugin implements Plugin
     {
 
             $panel->resources([
-               StripeProductResource::class, 
-               StripePlanResource::class
+
             ])
             ;
 

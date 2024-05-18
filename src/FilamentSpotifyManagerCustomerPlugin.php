@@ -2,17 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Bramato\FilamentStripeManager;
+namespace Bramato\FilamentSpotifyManager;
 
-use BezhanSalleh\FilamentShield\Support\Utils;
-use Bramato\FilamentStripeManager\Pages\PaymentHistory;
-use Bramato\FilamentStripeManager\Pages\PaymentMethod;
-use Bramato\FilamentStripeManager\Pages\Subscription;
-use Bramato\FilamentStripeManager\Resources\StripeProductResource;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
-class FilamentStripeManagerCustomerPlugin implements Plugin
+class FilamentSpotifyManagerCustomerPlugin implements Plugin
 {
 
     public static function make(): static
@@ -22,7 +17,7 @@ class FilamentStripeManagerCustomerPlugin implements Plugin
 
     public function getId(): string
     {
-        return 'filament-stripe-manager-customer';
+        return 'filament-spotify-customer';
     }
 
     public function register(Panel $panel): void
@@ -32,9 +27,7 @@ class FilamentStripeManagerCustomerPlugin implements Plugin
                //StripeProductResource::class,
             ])
                 ->pages([
-                    PaymentMethod::class,
-                    PaymentHistory::class,
-                    Subscription::class
+
                 ])
             ;
 

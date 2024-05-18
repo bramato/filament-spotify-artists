@@ -1,11 +1,12 @@
 {
-    "name": "bramato/filament-stripe-manager",
+    "name": "bramato/filament-spotify-manager",
     "type": "library",
-    "description": "Manage Submission and billing with Stripe in Filament",
+    "description": "Manage Spotify Artists in Filament",
     "keywords": [
         "filament",
         "laravel",
         "stripe",
+        "spotify",
         "submission"
     ],
     "license": "MIT",
@@ -20,25 +21,24 @@
     "require": {
         "php": ">=8.0",
         "filament/support": "^3.2",
-        "laravel/cashier": "^15.3",
         "calebporzio/sushi": "^2.5",
         "blade-ui-kit/blade-heroicons": "^2.3.0",
         "codeat3/blade-eos-icons": "^1.14.0"
     },
     "autoload": {
         "psr-4": {
-            "Bramato\\FilamentStripeManager\\": "src/"
+            "Bramato\\FilamentSpotifyManager\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Bramato\\FilamentStripeManager\\Tests\\": "tests"
+            "Bramato\\FilamentSpotifyManager\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Bramato\\FilamentStripeManager\\FilamentStripeManagerServiceProvider"
+                "Bramato\\FilamentSpotifyManager\\FilamentSpotifyManagerServiceProvider"
             ]
         }
     },

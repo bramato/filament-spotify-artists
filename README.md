@@ -62,7 +62,7 @@ This command will publish `filamentblog.php` config file and `create_blog_tables
  * | The recaptcha configuration is for setting up the recaptcha for the blog.
  */
 
-use Bramato\FilamentStripeManager\Models\User;
+use Bramato\FilamentSpotifyManager\Models\User;
 
 return [
     'route' => [
@@ -105,16 +105,16 @@ Before running the migration, you can modify the `filamentblog.php` config file 
 
  If you want to publish config, views, components, and migrations individually you can run the following command:
 ```bash
-php artisan vendor:publish --provider="Bramato\FilamentStripeManager\FilamentBlogServiceProvider" --tag=filament-blog-views
+php artisan vendor:publish --provider="Bramato\FilamentSpotifyManager\FilamentBlogServiceProvider" --tag=filament-blog-views
 ```
 ```bash
-php artisan vendor:publish --provider="Bramato\FilamentStripeManager\FilamentBlogServiceProvider" --tag=filament-blog-config
+php artisan vendor:publish --provider="Bramato\FilamentSpotifyManager\FilamentBlogServiceProvider" --tag=filament-blog-config
 ```
 ```bash
-php artisan vendor:publish --provider="Bramato\FilamentStripeManager\FilamentBlogServiceProvider" --tag=filament-blog-components
+php artisan vendor:publish --provider="Bramato\FilamentSpotifyManager\FilamentBlogServiceProvider" --tag=filament-blog-components
 ```
 ```bash
-php artisan vendor:publish --provider="Bramato\FilamentStripeManager\FilamentBlogServiceProvider" --tag=filament-blog-migrations
+php artisan vendor:publish --provider="Bramato\FilamentSpotifyManager\FilamentBlogServiceProvider" --tag=filament-blog-migrations
 ```
 
 ## What if you have already a User model?
@@ -138,7 +138,7 @@ You can attach the Filament Blog panel to the dashboard by adding the following 
 Add `Blog::make()` to your panel passing the class to your `plugins()` method.
 
 ```php
-use Bramato\FilamentStripeManager\Blog;
+use Bramato\FilamentSpotifyManager\Blog;
 
 public function panel(Panel $panel): Panel
 {
@@ -157,7 +157,7 @@ If you want to manage the user relationship, you can modify the `User` model to 
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Bramato\FilamentStripeManager\Traits\HasBlog;
+use Bramato\FilamentSpotifyManager\Traits\HasBlog;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -174,7 +174,7 @@ If you want to allow users to comment on blog posts, you can modify the `User` m
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Bramato\FilamentStripeManager\Traits\HasBlog;
+use Bramato\FilamentSpotifyManager\Traits\HasBlog;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
