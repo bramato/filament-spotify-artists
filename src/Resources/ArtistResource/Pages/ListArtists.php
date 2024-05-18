@@ -2,13 +2,13 @@
 
 namespace Bramato\FilamentSpotifyManager\Resources\ArtistResource\Pages;
 
-use Bramato\FilamentStripeManager\Resources\StripeProductResource;
+use Bramato\FilamentSpotifyManager\Resources\ArtistResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
 class ListArtists extends ListRecords
 {
-    protected static string $resource = StripeProductResource::class;
+    protected static string $resource = ArtistResource::class;
 
     protected function getHeaderActions(): array
     {

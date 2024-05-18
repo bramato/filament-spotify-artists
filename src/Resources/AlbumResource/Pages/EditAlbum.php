@@ -1,12 +1,12 @@
 <?php
 
-namespace Bramato\FilamentStripeManager\Resources\StripeProductResource\Pages;
+namespace Bramato\FilamentSpotifyManager\Resources\AlbumResource\Pages;
 
 use Bramato\FilamentStripeManager\Resources\StripeProductResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditStripeProduct extends EditRecord
+class EditAlbum extends EditRecord
 {
     protected static string $resource = StripeProductResource::class;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Bramato\FilamentStripeManager\Resources\StripeProductResource\RelationManagers;
+namespace Bramato\FilamentSpotifyManager\Resources\ArtistResource\RelationManagers;
 
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -10,32 +10,25 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class MetadataRelationManager extends RelationManager
+class AlbumRelationManager extends RelationManager
 {
-    protected static string $relationship = 'metadata';
+    protected static string $relationship = 'albums';
 
     public function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('value')->label('Description')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\Toggle::make('is_active')->default(0)
+
             ]);
     }
 
     public function table(Table $table): Table
     {
         return $table
-            ->recordTitleAttribute('title')
+            ->recordTitleAttribute('name')
             ->columns([
-                Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('value'),
-                Tables\Columns\ToggleColumn::make('is_active'),
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('cover'),
             ])
             ->filters([
                 //

@@ -2,11 +2,12 @@
 
 namespace Bramato\FilamentSpotifyManager\Resources;
 
-use Bramato\FilamentSpotifyManager\Models\Artist;
-use Bramato\FilamentSpotifyManager\Resources\ArtistResource\Pages\CreateArtist;
-use Bramato\FilamentSpotifyManager\Resources\ArtistResource\Pages\EditArtist;
-use Bramato\FilamentSpotifyManager\Resources\ArtistResource\Pages\ListArtists;
-use Bramato\FilamentSpotifyManager\Resources\ArtistResource\RelationManagers\AlbumRelationManager;
+use Bramato\FilamentSpotifyManager\Models\Album;
+use Bramato\FilamentSpotifyManager\Resources\AlbumResource\Pages\CreateAlbum;
+use Bramato\FilamentSpotifyManager\Resources\AlbumResource\Pages\EditAlbum;
+use Bramato\FilamentSpotifyManager\Resources\AlbumResource\Pages\ListAlbums;
+use Bramato\FilamentSpotifyManager\Resources\AlbumResource\RelationManagers\AlbumRelationManager;
+use Bramato\FilamentSpotifyManager\Resources\ArtistResource\RelationManagers\SongRelationManager;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -15,9 +16,9 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 
-class ArtistResource extends Resource
+class AlbumResource extends Resource
 {
-    protected static ?string $model = Artist::class;
+    protected static ?string $model = Album::class;
 
     protected static ?string $navigationIcon = 'zondicon-artist';
 
@@ -55,7 +56,7 @@ class ArtistResource extends Resource
     public static function getRelations(): array
     {
         return [
-            AlbumRelationManager::make()
+            SongRelationManager::make()
         ];
     }
 
