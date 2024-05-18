@@ -11,16 +11,6 @@ class FilamentSpotifyManagerServiceProvider extends PackageServiceProvider
     {
         $package->name('filament-stripe-manager')
             ->hasMigrations([
-                '2024_04_24_075328_update_user_col',
-                '2024_04_24_075329_create_stripe_webhook_calls_table',
-                '2024_04_24_121801_create_stripe_payments_table',
-                '2024_04_26_063441_create_stripe_payment_intents_table',
-                '2024_04_26_063735_create_stripe_charges_table',
-                '2024_04_26_153835_create_stripe_refund_table',
-                '2024_04_26_165215_create_stripe_invoices_table',
-                '2024_04_26_165216_create_stripe_invoice_lines_table',
-                '2024_04_26_205121_create_stripe_subscriptions_table',
-                '2024_04_26_205122_create_stripe_subscription_items_table',
                 'create_stripe_product_table',
                 'create_stripe_plan_table',
                 'create_stripe_metadatamorph_table',

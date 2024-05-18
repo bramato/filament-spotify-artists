@@ -23,7 +23,8 @@
         "filament/support": "^3.2",
         "calebporzio/sushi": "^2.5",
         "blade-ui-kit/blade-heroicons": "^2.3.0",
-        "codeat3/blade-eos-icons": "^1.14.0"
+        "codeat3/blade-eos-icons": "^1.14.0",
+        "jwilsson/spotify-web-api-php": "^6.0"
     },
     "autoload": {
         "psr-4": {
